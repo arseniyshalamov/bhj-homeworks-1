@@ -22,13 +22,11 @@ sliderArrowNext.onclick = () => {
 sliderArrowPrev.onclick = () => {
     let showSlide = sliderItems.findIndex(elm => elm.classList.contains("slider__item_active"));
     if (showSlide <= 0) {
-        showSlide += 1;
+        showSlide = sliderItems.length;
     }
     remove();
-    add(showSlide + 1);
+    add(showSlide - 1);
 }
 
 
-// slider__item_active
 
-// slider__dot_active
