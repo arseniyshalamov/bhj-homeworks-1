@@ -25,11 +25,11 @@ colors.forEach(color => {
     color.onclick = () => {
         colors.forEach(elm => elm.classList.remove("color_active"));
         color.classList.add("color_active");
-        if (elm.classList.contains("text_color_gray")) {
+        if (color.classList.contains("text_color_gray")) {
             book.classList.remove("book_color-black");
             book.classList.remove("book_color-whitesmoke");
             book.classList.add("book_color-gray");
-        } else if (elm.classList.contains("text_color_black")) {
+        } else if (color.classList.contains("text_color_black")) {
             book.classList.remove("book_color-gray");
             book.classList.remove("book_color-whitesmoke");
             book.classList.add("book_color-black");
@@ -41,4 +41,25 @@ colors.forEach(color => {
         return false;
     }
 })
-//можете подсказать, в чем ошибка в данном задании.
+
+backgrounds.forEach(background => {
+    background.onclick = () => {
+        backgrounds.forEach(elem => elem.classList.remove("color_active"));
+        background.classList.add("color_active");
+        if (background.classList.contains("bg_color_gray")) {
+            book.classList.remove("book_bg-black");
+            book.classList.remove("book_bg-white");
+            book.classList.add("book_bg-gray");
+        } else if (background.classList.contains("bg_color_black")) {
+            book.classList.add("book_bg-black");
+            book.classList.remove("book_bg-white");
+            book.classList.remove("book_bg-gray");
+        } else {
+            book.classList.remove("book_bg-gray");
+            book.classList.remove("book_bg-black");
+            book.classList.add("book_bg-white");
+        }
+        return false;
+    };
+
+})
