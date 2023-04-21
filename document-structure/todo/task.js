@@ -3,7 +3,7 @@ const tasksAdd = document.querySelector(".tasks__add");
 const tasksList = document.querySelector(".tasks__list");
 
 function addToDo() {
-    tasksList.insertAdjacentHTML('afterend', `<div class="task"><div class="task__title">Сходить в магазин</div><a href="#" class="task__remove">&times;</a></div>`);
+    tasksList.insertAdjacentHTML('afterend', `<div class="task"><div class="task__title">${tasksInput.value}</div><a href="#" class="task__remove">&times;</a></div>`);
     tasksInput.value = '';
 
     const closest = document.querySelector(".task__remove");
@@ -18,4 +18,3 @@ tasksAdd.addEventListener('click', elem => {
         addToDo();
     }
 })
-

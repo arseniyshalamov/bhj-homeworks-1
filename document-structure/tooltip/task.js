@@ -8,12 +8,11 @@ hasTooltip.forEach(elem => {
         const activ = document.querySelector(".tooltip_active");
         if (activ && (activ !== tooltip)) {
             activ.classList.toggle("tooltip_active");
-        } else {
-            tooltip.classList.toggle("tooltip_active");
-            let tooltipElem = Math.round(elem.getBoundingClientRect().left).toString();
-            tooltip.style.left = tooltipElem + "px";
-            elem.insertAdjacentElement("afterend", tooltip);
-            elm.preventDefault();
-        }
+        } 
+        tooltip.classList.toggle("tooltip_active");
+        let tooltipElem = Math.round(elem.getBoundingClientRect().left).toString();
+        tooltip.style.left = tooltipElem + "px";
+        elem.insertAdjacentElement("afterend", tooltip);
+        elm.preventDefault();    
     })
 })
